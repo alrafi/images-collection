@@ -6,6 +6,10 @@ const getters = {
   isLoggedIn: state => !!state.token
 };
 
-const mutations = {};
+const mutations = {
+  setToken: (state, token) => {
+    state.token = token;
+  }
+};
 
 const actions = {};
