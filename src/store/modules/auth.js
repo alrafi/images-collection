@@ -22,3 +22,10 @@ const actions = {
     commit('setToken', null);
   }
 };
+
+export default {
+  state,
+  getters,
+  mutations,
+  actions
+};
