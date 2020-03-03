@@ -1,30 +1,17 @@
 <template>
   <div>
-    <div class="ui secondary pointing menu">
-      <a class="item active">
-        Home
-      </a>
-      <a class="item">
-        Gallery
-      </a>
-      <a class="item">
-        Upload
-      </a>
-      <div class="right menu">
-        <a class="ui item">
-          Logout
-        </a>
-      </div>
-    </div>
-    <div class="ui segment">
-      <p></p>
-    </div>
+    <AppHeader />
   </div>
 </template>
 
 <script>
+import AppHeader from "./components/AppHeader";
+
 export default {
-  name: 'App'
+  name: "App",
+  components: {
+    AppHeader
+  }
 };
 </script>
 
