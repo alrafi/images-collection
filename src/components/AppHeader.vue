@@ -2,11 +2,11 @@
   <div>
     <div class="ui secondary pointing menu">
       <a class="item active">Home</a>
-      <a class="item">Gallery</a>
-      <a class="item">Upload</a>
-      {{ isLoggedIn }}
+      <a class="item inline__block">Gallery</a>
+      <a class="item inline__block">Upload</a>
       <div class="right menu">
-        <a class="ui item" @click="login">Login</a>
+        <a v-if="isLoggedIn" class="ui item" @click="login">Login</a>
+        <a v-else class="ui item">Logout</a>
       </div>
     </div>
   </div>
@@ -26,5 +26,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.inline__block {
+  display: inline-block;
+}
 </style>
