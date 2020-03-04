@@ -5,6 +5,7 @@ import store from './store';
 import AuthHandler from './components/AuthHandler';
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/oauth2/callback',
