@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <h3>Image list</h3>
-    <img v-for="image in allImages" :key="image.id" :src="image.link" class="list__image" />
+  <div class="image__container">
+    <img v-for="image in allImages" :key="image.id" :src="image.link" />
   </div>
 </template>
 
@@ -19,7 +18,13 @@ export default {
 </script>
 
 <style scoped>
-.list__image {
-  width: 200px;
+.image__container {
+  column-count: 3;
+  column-gap: 0;
+}
+
+img {
+  max-width: 100%;
+  padding: 5px;
 }
 </style>
