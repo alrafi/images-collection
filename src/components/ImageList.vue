@@ -1,7 +1,7 @@
 <template>
   <div>
-    Image List
-    {{ allImages.length }}
+    <h3>Image list</h3>
+    <img v-for="image in allImages" :key="image.id" :src="image.link" class="list__image" />
   </div>
 </template>
 
@@ -18,5 +18,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.list__image {
+  width: 200px;
+}
 </style>
