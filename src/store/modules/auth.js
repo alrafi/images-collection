@@ -10,12 +10,6 @@ const getters = {
   isLoggedIn: state => !!state.token
 };
 
-const mutations = {
-  setToken: (state, token) => {
-    state.token = token;
-  }
-};
-
 const actions = {
   login: () => {
     api.login();
@@ -32,6 +26,12 @@ const actions = {
     commit('setToken', null);
     window.localStorage.removeItem('imgur_token');
     window.location = '/';
+  }
+};
+
+const mutations = {
+  setToken: (state, token) => {
+    state.token = token;
   }
 };
 
