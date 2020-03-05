@@ -1,13 +1,15 @@
 <template>
   <div class="dropper">
-    <input type="file" />
+    <input type="file" @change="uploadImage" />
     <span>Drop image here!</span>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-  name: "UploadForm"
+  name: "UploadForm",
+  methods: mapActions(["uploadImage"])
 };
 </script>
 

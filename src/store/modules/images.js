@@ -13,12 +13,19 @@ const actions = {
     const { token } = rootState.auth;
     const response = await api.fetchImages(token);
     commit('setImages', response.data.data);
+  },
+  async uploadImage({ commit }, image) {
+    console.log(image);
+    commit('consoleCommit', image);
   }
 };
 
 const mutations = {
   setImages: (state, images) => {
     state.images = images;
+  },
+  consoleCommit: image => {
+    console.log(image);
   }
 };
 
